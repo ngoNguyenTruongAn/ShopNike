@@ -1,0 +1,182 @@
+:root{
+    --primary-color:rgb(73, 73, 75);
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#333;
+    --border-color:#dbdbdb;
+}
+*{
+    box-sizing: inherit;
+}
+html{
+    /*Hack*/
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Bebas Neue", sans-serif;
+    box-sizing: border-box;
+
+}
+.grid{
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid__full-width{
+    width: 100%;
+}
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+/* Test */
+.grid__collumn-2{
+ padding-left: 12px;
+ padding-right: 12px;
+ width: 16.6667%;
+}
+.grid__collumn-4{
+    padding-left: 12px;
+ padding-right: 12px;
+ width: 25%;
+}
+.grid__collumn-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
+   }
+
+
+/*Animation*/
+@keyframes fadeIn{
+    from{
+      opacity: 0;
+    }
+    to{
+     opacity: 1;
+    }
+}
+@keyframes growth{
+ from{
+  transform: scale(var(--growth-form));
+ }
+ to{
+transform: scale(var(--growth-to));
+ }
+}
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+}
+.modal__overplay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    
+}
+.modal__body{
+    margin: auto;
+    --growth-form:0.7;
+    --growth-to:1;
+    background-color: var(--white-color);
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    animation: growth linear 0.1s;
+}
+/* button style*/
+.btn{
+    background-color: var(--white-color);
+    /*
+    min-width: 142px;
+    */
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.8rem;
+    padding: 0 8px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn.btn--normal:hover{
+ background-color: rgba(0,0,0,0.05);
+}
+.btn.btn--primary{
+ background-color: rgb(243, 68, 68);
+ color: var(--white-color);
+}
+.btn.btn--disable{
+cursor: default;
+}
+.btn--size-s{
+    height: 30px;
+    font-size: 1.2rem;
+}
+.auth-form__socials--facebook {
+    background-color:#3A5A98 ;
+    color: var(--white-color);
+}
+.auth-form__socials--google{
+    color: #666;
+    background-color: var(--white-color);
+}
+/* Selection */ 
+.select-input{
+    position: relative;
+    min-width: 200px;
+    height: 36px;
+    padding: 0 8px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.select-input__label{
+    font-size: 1.6rem;
+
+}
+.select-input__icon{
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    
+    position: relative;
+    top: 1px;
+}
+.select-input:hover .select-input__list{
+    display: block;
+}
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:27px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: none;
+    list-style: none;
+    padding: 10px 16px;
+}
+.select-input__link{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+.select-input__link:hover{
+    color: rgb(243, 68, 68);;
+}
+
