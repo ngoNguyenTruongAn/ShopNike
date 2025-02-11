@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;;
+}
+ul{
+    list-style: none;
+}
+html{
+    font-size: 80%;
+}
+body{
+    width: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+
+}
+.web{
+    margin: 30px;
+    width: 500px;
+}
+.web h1{
+    margin-bottom: 30px;
+    color: black;
+    font-size: 3rem;
+    
+    
+}
+.web .list li{
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    float: left;
+}
+.web .list li a{
+    background-color: #01bacf;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 4px 10px 3px;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: 0.3s background-color;
+
+}
+.web .list li a:hover{
+    
+    background-color: #9ae13e;
+}
